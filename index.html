@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>贪吃蛇游戏</h1>
+        <div class="game-info">
+            <div class="score">分数: <span id="score">0</span></div>
+            <div class="high-score">最高分: <span id="high-score">0</span></div>
+        </div>
+        <!-- 音频元素 -->
+        <div class="audio-container" style="display: none;">
+            <audio id="move-sound" preload="auto"></audio>
+            <audio id="eat-sound" preload="auto"></audio>
+        </div>
+        <div class="game-controls">
+            <button id="start-btn">开始游戏</button>
+            <button id="pause-btn">暂停</button>
+            <button id="restart-btn">重新开始</button>
+        </div>
+        <div class="speed-control">
+            <label for="speed-slider">游戏速度:</label>
+            <input type="range" id="speed-slider" min="1" max="10" value="5" class="slider">
+            <span id="speed-value">中等</span>
+        </div>
+        <div class="sound-control">
+            <label for="sound-toggle">音效:</label>
+            <input type="checkbox" id="sound-toggle" checked>
+            <span>开启</span>
+        </div>
+        <canvas id="game-board" width="400" height="400"></canvas>
+        <div class="game-instructions">
+            <h2>游戏说明</h2>
+            <p>使用键盘方向键 ↑ ↓ ← → 控制蛇的移动方向</p>
+            <p>吃到食物可以增加分数和蛇的长度</p>
+            <p>撞到墙壁或自己的身体游戏结束</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
